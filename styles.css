@@ -1,0 +1,42 @@
+
+
+/* FedPromptly invite control for the login-position header slot */
+.invite-btn { position: relative; isolation: isolate; display: inline-flex; align-items: center; gap: 9px; padding: 6px 11px 6px 7px; border-radius: 14px; text-decoration: none; background: var(--ink); color: var(--paper); border: 1px solid rgba(255,255,255,.15); box-shadow: 0 6px 18px -8px rgba(0,0,0,.7); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; font: inherit; cursor: pointer; }
+.invite-btn::before { content: ""; position: absolute; inset: -2px; z-index: -1; border-radius: 16px; background: linear-gradient(120deg, #5865f2, #00b0f4, #eb459e, #5865f2); background-size: 300% 300%; filter: blur(10px); opacity: 0; animation: invite-flow 8s linear infinite; transition: opacity .3s ease; }
+.invite-btn:hover, .invite-btn:focus-visible { transform: translateY(-2px); border-color: rgba(88,101,242,.7); box-shadow: 0 10px 26px -10px rgba(0,0,0,.85), 0 0 0 1px rgba(88,101,242,.25); }
+.invite-btn:hover::before, .invite-btn:focus-visible::before { opacity: .55; }
+.invite-btn:active { transform: translateY(0) scale(.985); }
+.invite-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.invite-btn .invite-icon { position: relative; flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,.4); }
+.invite-btn .invite-icon img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; transform: scale(.96); }
+.invite-btn .invite-dot { position: absolute; right: -2px; bottom: -2px; width: 9px; height: 9px; border-radius: 50%; background: #57f287; border: 2px solid var(--ink); }
+.invite-btn .invite-label { display: flex; flex-direction: column; gap: 1px; line-height: 1.1; text-align: left; }
+.invite-btn .invite-name { font-size: .75rem; font-weight: 850; color: #fff; }
+.invite-btn .invite-meta { font-size: .58rem; font-weight: 650; color: rgba(255,255,255,.62); }
+.invite-btn .invite-arrow { font-size: 1rem; color: rgba(255,255,255,.62); transition: transform .2s ease, color .2s ease; }
+.invite-btn:hover .invite-arrow { color: #fff; transform: translateX(3px); }
+@keyframes invite-flow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.invite-modal { width: min(94vw, 520px); max-width: 520px; max-height: 92dvh; margin: auto; padding: 0; border: none; background: transparent; overflow: auto; color: inherit; }
+.invite-modal::backdrop { background: rgba(15,16,18,.74); backdrop-filter: blur(6px); }
+.invite-modal[open] { animation: invite-modal-in .22s ease-out; }
+@keyframes invite-modal-in { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.invite-panel { position: relative; width: 100%; background: #313338; color: #dbdee1; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px -12px rgba(0,0,0,.75); }
+.invite-close { position: absolute; top: 12px; right: 12px; z-index: 4; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); background: rgba(0,0,0,.45); color: #fff; cursor: pointer; font-size: 1.2rem; }
+.invite-banner { height: 118px; background: linear-gradient(120deg, #232428 0%, #5865f2 30%, #00b0f4 60%, #eb459e 85%, #232428 100%); background-size: 300% 300%; animation: invite-color-flow 10s ease-in-out infinite; }
+@keyframes invite-color-flow { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.invite-card-body { padding: 42px 22px 22px; position: relative; }
+.invite-avatar { position: absolute; left: 20px; top: -44px; width: 76px; height: 76px; border: 5px solid #313338; border-radius: 50%; background: #fff; object-fit: cover; box-shadow: 0 6px 16px rgba(0,0,0,.45); }
+.invite-card-body h2 { color: #f2f3f5; font-size: 1.5rem; margin-bottom: 6px; }
+.invite-stats { font-size: .78rem; color: #949ba4; }
+.invite-description { padding-top: 16px; margin-top: 14px; border-top: 1px solid rgba(255,255,255,.08); font-size: .88rem; color: #949ba4; }
+.invite-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.invite-pill { padding: 6px 9px; border-radius: 8px; background: #2b2d31; color: #949ba4; font-size: .72rem; }
+.invite-contacts { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.08); font-size: .72rem; }
+.invite-contacts a { color: #dbdee1; }
+.invite-join { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 18px; padding: 13px 16px; border-radius: 10px; background: #5865f2; color: #fff; font-weight: 800; text-decoration: none; transition: background .18s ease, transform .18s ease; }
+.invite-join:hover { background: #4752c4; transform: translateY(-1px); }
+.invite-card-footer { display: flex; justify-content: space-between; gap: 14px; padding: 12px 22px; background: #232428; border-top: 1px solid rgba(255,255,255,.08); color: #949ba4; font-size: .72rem; }
+.invite-card-footer a { color: #dbdee1; }
+@media (max-width: 900px) { .invite-btn .invite-meta { display: none; } }
+@media (max-width: 620px) { .invite-btn { padding-right: 8px; } .invite-btn .invite-label { display: none; } }
+@media (prefers-reduced-motion: reduce) { .invite-btn::before, .invite-modal[open], .invite-banner { animation: none !important; } .invite-btn, .invite-btn .invite-arrow, .invite-join { transition: none; } }

@@ -1,0 +1,16 @@
+{
+  "name": "Muse AI Moods",
+  "short_name": "Muse Moods",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f0df",
+  "theme_color": "#151515",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
