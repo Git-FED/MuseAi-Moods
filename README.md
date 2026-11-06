@@ -1,5 +1,7 @@
 # Muse AI Moods
 
+<img width="896" height="504" alt="Muse AI Moods commercial - large GIF" src="https://github.com/user-attachments/assets/6a17eacd-2190-40b3-8a7d-634ab1126937" />
+
 A playful static website that turns the held Muse AI Moods record into an animated, shareable set of five color-coded HTML pages.
 
 [![Static HTML/CSS/JS](https://img.shields.io/badge/stack-static%20HTML%2FCSS%2FJS-151515)](./index.html)
